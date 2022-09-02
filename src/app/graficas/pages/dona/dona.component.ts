@@ -8,16 +8,16 @@ import { ChartData, ChartEvent, ChartType, Color } from 'chart.js';
 })
 export class DonaComponent {
 
-  // Doughnut
-  public doughnutChartLabels: string[] = [ 'Download Sales', 'In-Store Sales', 'Mail-Order Sales' ];
+  // Doughnut https://www.chartjs.org/docs/latest/general/colors.html
+  public doughnutChartLabels: string[] = [ 'Download Sales', 'In-Store Sales', 'Mail-Order Sales', 'Others' ];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
     datasets: [
-      { data: [ 350, 450, 100 ],
-        backgroundColor: ['#248CF2','#26CBFC','#2DE6E1'],
-        hoverBackgroundColor: ['#4EA1F2','#51D5FC','#55E6E2'],
-        borderColor: ['#248CF2','#26CBFC','#2DE6E1'],
-        hoverBorderColor: ['#248CF2','#26CBFC','#2DE6E1'],
+      { data: [ 350, 450, 100, 150 ],
+        backgroundColor: ['#248CF2','#26CBFC','#2DE6E1', '#4EF290'],
+        hoverBackgroundColor: ['#4EA1F2','#51D5FC','#55E6E2', '#62F59E'],
+        borderColor: ['#248CF2','#26CBFC','#2DE6E1','#4EF290'],
+        hoverBorderColor: ['#248CF2','#26CBFC','#2DE6E1','#62F59E'],
         hoverOffset: 15        
       },
       
